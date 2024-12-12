@@ -1,5 +1,5 @@
 # Use the official Python image as the base image
-FROM gcr.io/google-appengine/python:3.11
+FROM python:3.10-alpine
 
 # Set the working directory in the container
 WORKDIR /app
