@@ -19,7 +19,7 @@ phases:
       - echo "Pushing the Docker image to ECR..."
       - docker push 606886439950.dkr.ecr.us-east-1.amazonaws.com/assign03:latest
       - echo "Creating imagedefinitions.json..."
-      - printf '[{"name":"assign03","imageUri":"606886439950.dkr.ecr.us-east-1.amazonaws.com/assign03:latest"}]' > imagedefinitions.json
+      - printf '[{"name":"assign03-contianer","imageUri":"606886439950.dkr.ecr.us-east-1.amazonaws.com/assign03:latest"}]' > imagedefinitions.json
       - echo "Updating ECS service to use the latest image..."
       - aws ecs update-service --cluster assign03-cluster --service assign03service --force-new-deployment
       - echo "imagedefinitions.json created successfully."
